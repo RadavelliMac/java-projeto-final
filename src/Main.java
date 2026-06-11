@@ -10,20 +10,46 @@ public class Main {
     public static void main(String[] args) {
         Scanner sc = new Scanner(System.in);
 
-        System.out.print("Digite nome do seu produto: ");
-        String nome = sc.nextLine();
+        System.out.println("Olá. Escolha qual opção deseja realizar no sistema: ");
+        System.out.println("1 - Cadastrar produto");
+        System.out.println("2 - Consultar produto");
+        System.out.println("3 - Excluir produto");
+        System.out.println("4 - Editar produto");
+        System.out.println();
 
-        try {
-            Path path = Paths.get("Produtos.txt");
-            Files.write(
-                    path,
-                    List.of(nome),
-                    StandardOpenOption.CREATE,
-                    StandardOpenOption.APPEND
-            );
-        }catch (IOException e) {
-            System.out.println("An error occurred while reading the file: " + e.getMessage());
-            e.printStackTrace();
+        Path path = Path.of("Produtos.txt");
+
+        int  opcao = sc.nextInt();
+        switch (opcao) {
+            case 1:
+                try {
+                    System.out.println("Digite o nome do produto: ");
+                }
+                catch (Exception e) {
+                    e.printStackTrace();
+                }
+            case 2:
+                try {
+                    System.out.println("Consulta de produtos");
+
+                    String conteudo = Files.readString(path);
+                    System.out.println(conteudo);
+                }
+                catch (Exception e) {
+                    e.printStackTrace();
+                }
         }
+        System.out.println();
+
+    }
+}
+
+class Produto {
+    private String nome;
+    private double preco;
+
+    private String lerArquivo() {
+        Scanner sc = new Scanner(System.in);
+        return "";
     }
 }
