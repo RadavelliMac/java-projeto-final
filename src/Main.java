@@ -17,7 +17,7 @@ public class Main {
         System.out.println("4 - Editar produto");
         System.out.println();
 
-        Path path = Path.of("Produtos.txt");
+        Path path = Path.of("produtos.json");
 
         int  opcao = sc.nextInt();
         switch (opcao) {

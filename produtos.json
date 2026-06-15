@@ -1,0 +1,16 @@
+[
+  {
+    "banana": {
+      "preco": 4,
+      "descricao": "branca",
+      "medida": "kg",
+      "quantidade": 50
+    },
+    "leite": {
+      "preco": 4.99,
+      "descricao": "semi-desnatado",
+      "medida": "Litro",
+      "quantidade": 16
+    }
+  }
+]
